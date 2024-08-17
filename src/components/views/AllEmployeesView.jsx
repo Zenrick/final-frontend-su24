@@ -10,7 +10,7 @@ function AllEmployeesView({employees}) {
     <>
       <ul>
         {employees.map((user, idx) => (
-          <li key={user.id}>Employee #{idx+1}: {user.name}</li>
+          <li key={user.id}>Employee #{idx+1}: {user.firstname}</li>
         ))}
       </ul>
       <Link to={`/`}><button>Back to Home</button></Link>
