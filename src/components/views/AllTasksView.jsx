@@ -32,7 +32,7 @@ function AllTasksView({ tasks, deleteTask }) {
     );
   }
   return (
-    <div id="bgview" style={{display: "flex", flexDirection: "column", padding: "8px", width: "400px"}} >
+    <div id="bgview" style={{display: "flex", flexDirection: "column", padding: "8px", minWidth: "500px"}} >
       <Link to={`/`}><button style={{margin: "8px"}}>Back to Home</button></Link>
       <Link to={`/tasks/new`}><button style={{margin: "8px"}}>Add Task</button></Link>
       <div style={ulStyle}>

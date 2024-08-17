@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
 
-function NewTaskView({ handleSubmit }) {
-    let priortityMarkup = (
-      <p>Priority level:
+function NewTaskView({ handleSubmit, employees }) {
+    let selectPriority = (
+      <p> Priority level:
         <label>
           <input type="radio" name="taskPriority" value="1" /> Low
         </label>
@@ -14,14 +14,27 @@ function NewTaskView({ handleSubmit }) {
         </label>
       </p>
     );
+
+    let selectEmployee = (
+      <label> Assign employee:
+        <select name="employeeId" defaultValue="null">
+          <option value="null">None</option>
+          {employees.map(emp => {
+            let name = emp.firstname + " " + emp.lastname;
+            return <option key={emp.id} value={emp.id}>{name}</option>;
+          })}
+        </select>
+      </label>
+    );
     return (
-        <section >
+        <section>
           <h2>Add a New Task</h2>
           <form onSubmit={handleSubmit} id="newtaskform">
             <label>
-              Text input: <input name="taskContent" />
+              Description: <input name="taskContent" />
             </label>  
-            {priortityMarkup}
+            {selectPriority}
+            {selectEmployee}
             <button>Save Task</button>
           </form>
           <br/>
