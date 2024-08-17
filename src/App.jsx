@@ -1,12 +1,16 @@
-import './App.css'
-import AllEmployeesContainer from './components/containers/AllEmployeesContainer'
+import './App.css';
+import { BrowserRouter, Link } from "react-router-dom";
 
 function App() {
-
   return (
-      <AllEmployeesContainer/>
- 
+    <>
+      <BrowserRouter>
+      <h1>WELCOME</h1>
+      <Link to="/employees"><button>All Employees</button></Link>
+      <Link to="/tasks"><button>All Tasks</button></Link>
+      </BrowserRouter>
+    </>
   );
 }
 
-export default App
+export default App;
