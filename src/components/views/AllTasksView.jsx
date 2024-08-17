@@ -20,8 +20,7 @@ let liStyleLastChild = {
 
 import { Link } from "react-router-dom";
 
-function AllTasksView({tasks}) {
-  let deleteTask = (taskId) => {};
+function AllTasksView({tasks, deleteTask}) {
 
   if (!tasks.length) {
     return (
