@@ -1,10 +1,20 @@
 import AllEmployeesView from "../views/AllEmployeesView";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { fetchEmployees } from "../../store/employeesSlice";
 
 function AllEmployeesContainer() {
-    let employees = [{id: 234432, name: "Zenrick"}, {id: 1420, name: "Billy"}];
+    const employees = useSelector((state) => state.employees);
+    const dispatch = useDispatch();
+
+    useEffect(() => {
+        dispatch(fetchEmployees());
+      }, [dispatch]);
+    
     return (
-        <AllEmployeesView employees={employees} />
+       <AllEmployeesView employees={employees} />
     );
+
 }
 
 export default AllEmployeesContainer;
