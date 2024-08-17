@@ -7,6 +7,9 @@ import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
 import NewTaskContainer from './components/containers/NewTaskContainer.jsx';
 import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
+import SingleEmployeeView from './components/views/SingleEmployeeView.jsx';
+
+
 
 import './index.css';
 
@@ -39,6 +42,10 @@ const router = createBrowserRouter([
   {
     path: "/tasks/:taskId",
     element: <SingleTaskContainer />,
+  },
+  {
+    path: "/employees/:employeeId",
+    element: <SingleEmployeeView />,
   },
 
 ]);
