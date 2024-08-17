@@ -4,6 +4,7 @@ import ReactDOM from 'react-dom/client';
 import App from './App.jsx';
 import AllEmployeesContainer from './components/containers/AllEmployeesContainer.jsx';
 import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
+import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
 
 import './index.css';
 
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "/tasks",
     element: <AllTasksContainer />,
+  },
+  {
+    path: "/tasks/:taskId",
+    element: <SingleTaskContainer />,
   },
 ]);
 
