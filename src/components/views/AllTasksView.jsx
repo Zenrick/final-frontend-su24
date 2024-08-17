@@ -1,13 +1,13 @@
 import { Link } from "react-router-dom";
 
-function AllEmployeesView(props) {
+function AllTasksView(props) {
     return (
         <>
-          <h4>ALL EMPLOYEES</h4>
+          <h4>ALL TASKS</h4>
           <Link to={`/`}><button>Back to Home</button></Link>
-        </>
+        </>    
     );
 
 }
 
-export default AllEmployeesView;
+export default AllTasksView;
