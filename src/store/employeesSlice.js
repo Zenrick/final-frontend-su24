@@ -1,5 +1,10 @@
 //REDUCER
-const initialState = [];
+const initialState = {
+  employees: [], // Ensure this is an array
+  status: 'idle',
+  error: null
+};
+
 
 export function employeesReducer(state = initialState, action) {
     switch (action.type) {

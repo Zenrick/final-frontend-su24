@@ -7,10 +7,6 @@ import AllTasksContainer from './components/containers/AllTasksContainer.jsx';
 import SingleTaskContainer from './components/containers/SingleTaskContainer.jsx';
 import NewTaskContainer from './components/containers/NewTaskContainer.jsx';
 import EditTaskContainer from './components/containers/EditTaskContainer.jsx';
-import SingleEmployeeView from './components/views/SingleEmployeeView.jsx';
-import EditEmployeeContainer from './components/containers/EditEmployeeContainer';
-import AddEmployeeContainer from './components/containers/AddEmployeeContainer';
-import DeleteEmployeeContainer from './components/containers/DeleteEmployeeContainer';
 
 
 
@@ -46,26 +42,6 @@ const router = createBrowserRouter([
   {
     path: "/tasks/:taskId",
     element: <SingleTaskContainer />,
-  },
-  {
-    path: "/employees/:employeeId",
-    element: <SingleEmployeeView />,
-  },
-  {
-    path: "/employees",
-    element: <AllEmployeesContainer />,
-  },
-  {
-    path: "/employees/new",
-    element: <AddEmployeeContainer />,
-  },
-  {
-    path: "/employees/:employeeId/edit",
-    element: <EditEmployeeContainer />,
-  },
-  {
-    path: "/employees/:employeeId/delete",
-    element: <DeleteEmployeeContainer />,
   },
 
 ]);
